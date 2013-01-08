@@ -1,0 +1,91 @@
+#+TITLE:     Git Commands
+#+AUTHOR:    Andrew Caird
+#+EMAIL:     acaird@Andrews-MacBook-Air-2.local
+#+DATE:      2013-01-07 Mon
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+
+* Basic Branching and Merging[fn:1]
+
+
+** Creating and Using a Branch
+The command
+   #+BEGIN_EXAMPLE
+   $ git checkout -b iss53
+   Switched to a new branch "iss53"
+   #+END_EXAMPLE
+creates a branch and switches to it.  This is the same as
+#+BEGIN_EXAMPLE
+git branch iss53
+git checkout iss53
+#+END_EXAMPLE
+
+The command =git branch= lists the branches; the one with the =*= by
+it is the active branch.  
+
+The command =git checkout <branchname>= switches to another branch.
+
+The command =git diff <branchname>= shows the differences between the
+current branch and <branchname>.
+
+To merge a branch with the current branch, type: =git merge
+<branchname>=.
+
+A common workflow is to do:
+ - =git pull=
+ - =git checkout -b mybranch=
+ - edit files on =mybranch=
+ - commit changes on =mybranch= with the =git commit= command
+ - do more edits and commits on =mybranch=
+ - switch back to the master branch with the command =git checkout master=
+ - update the master branch with =git pull=
+ - check the differences between the master branch and =mybranch=
+   with the command =git diff mybranch=
+ - if the differences look OK, merge =mybranch= into the master
+   branch with the command =git merge mybranch=
+ - push your changes back to the origin with the command =git push=
+
+* How to Push a New Local Branch to a Remote Git Repository[fn:2]
+
+** Pushing a Branch
+
+=git push -u origin plugin= tells git to push changes from your plugin
+branch to the plugin branch on the origin repository. If origin does
+not have a plugin branch, it is created on the fly. The =-u= tells git
+that you want to be able to easily push and pull changes to that
+branch in the future. (=-u= is the same as =--set-upstream= and adds
+a remote reference so the commands =git push= and =git pull= while in
+that branch locally will push to and pull from that branch
+remotely).  The name =plugin= is just an example; you can name your
+branch anything.
+
+** Pulling a Branch
+
+#+BEGIN_EXAMPLE
+git fetch origin
+git checkout --track origin/plugin
+#+END_EXAMPLE
+
+The first command updates your repository with the changes from the
+remote repository. The second command creates a local branch named
+=plugin= that matches the =origin/plugin= branch and tells git that
+you want to be able to easily push and pull from the branch called
+=plugin= on GitHub.
+
+* Footnotes
+
+[fn:1] http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging
+
+[fn:2] http://www.mariopareja.com/blog/archive/2010/01/11/how-to-push-a-new-local-branch-to-a-remote.aspx
+
+
+
