@@ -14,6 +14,18 @@
 #+LINK_HOME: 
 #+XSLT:
 
+* Getting Started
+
+** Making your own repository
+
+** CAEN GitHub Repositories
+
+*** Seeing the CAEN GitHub Repositories
+
+*** Checking out a CAEN GitHub Repository
+
+*** Working with CAEN Repositories
+
 * Basic Branching and Merging[fn:1]
 
 
@@ -54,6 +66,9 @@ A common workflow is to do:
    branch with the command =git merge mybranch=
  - push your changes back to the origin with the command =git push=
 
+
+** Using =git stash= to switch branches without committing[fn:3]
+
 * How to Push a New Local Branch to a Remote Git Repository[fn:2]
 
 ** Pushing a Branch
@@ -86,6 +101,8 @@ you want to be able to easily push and pull from the branch called
 [fn:1] http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging
 
 [fn:2] http://www.mariopareja.com/blog/archive/2010/01/11/how-to-push-a-new-local-branch-to-a-remote.aspx
+
+[fn:3] http://git-scm.com/book/en/Git-Tools-Stashing
 
 
 
