@@ -1,7 +1,6 @@
 #+TITLE:     Git Commands
 #+AUTHOR:    Andrew Caird
-#+EMAIL:     acaird@Andrews-MacBook-Air-2.local
-#+DATE:      2013-01-07 Mon
+#+EMAIL:     acaird@umich.edu
 #+DESCRIPTION:
 #+KEYWORDS:
 #+LANGUAGE:  en
@@ -16,17 +15,80 @@
 
 * Getting Started
 
+** One-time commands
+
+There are a few commands you'll run only once per system on which you
+use Git[fn:4].  One is setting your name and email address:
+#+BEGIN_EXAMPLE
+   $ git config --global user.name "John Doe"
+   $ git config --global user.email johndoe@example.com    
+#+END_EXAMPLE
+You can also have per-repository names and email address by leaving
+off =--global= and running those commands inside of a repository.
+
 ** Making your own repository
+
+In any directory you can type =git init= which creates a =.git=
+directory for you.  
+
+After that, you can create files or use files that exist in that
+directory to populate your git tree by using the commands =git add
+<filename>= and =git commit= 
+
+You can then use =git clone=, =git pull=, and =git push= to copy,
+update from, and update to your repository.
 
 ** CAEN GitHub Repositories
 
 *** Seeing the CAEN GitHub Repositories
 
+The CAEN GitHub Repositories are listed at:
+#+BEGIN_EXAMPLE
+    https://github.com/organizations/CAEN/
+#+END_EXAMPLE
+and looking at the list of repositories on the right-hand side of the
+page.  You will only see those repositories to which you have been
+granted access. 
+
 *** Checking out a CAEN GitHub Repository
+
+To copy a repository from the CAEN GitHub project, you first need
+permissions.  As soon as you can see it in the list at
+https://github.com/organizations/CAEN/ you can copy it.
+
+The command to copy a repository is:
+#+BEGIN_EXAMPLE
+  git clone https://github.com/CAEN/<repository_name>
+#+END_EXAMPLE
+
+After that you'll have a complete copy of everything in that
+repository.  
+
+There are no "master" repositories in Git, so you can clone the
+repository again from your copy, or allow others to clone your copy,
+and merge them back in later or not.  In most cases, you have files
+in Box or AFS and that isn't practical, though.
 
 *** Working with CAEN Repositories
 
-* Basic Branching and Merging[fn:1]
+There are two recommended ways to work with CAEN Git Repositories.
+
+ 1. Do all your work locally in branches, and push the =master=
+    branch to GitHub when you're done; this is described below.
+ 2. Make a "master branch" for yourself, push the branch to GitHub,
+    do your work in that branch or branchs of that branch, merging in
+    changes from the =master= branch from time to time, and when
+    you'd like your branch merged into the =master= branch, ask the
+    owner of the =master= branch to do the merge for you, so she or
+    he can make sure your changes are appropriate.
+
+Both of these methods are described in more detail below.
+
+
+* Basic Branching and Merging
+
+Basic Branching and Merging is well described here:
+http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging
 
 
 ** Creating and Using a Branch
@@ -67,9 +129,29 @@ A common workflow is to do:
  - push your changes back to the origin with the command =git push=
 
 
-** Using =git stash= to switch branches without committing[fn:3]
+** Using =git stash= to switch branches without committing
 
-* How to Push a New Local Branch to a Remote Git Repository[fn:2]
+To switch branches from a "dirty" branch without commiting the
+changes, simply type =git stash= [fn:3], which moves your changes off to the
+side, thus making your current branch clean so you can switch away
+from it.
+
+When you come back to that branch, you can type =git stash list= to
+see the things you've stashed and =git stash apply= to apply the most
+recent stash.  =git stash drop= drops the most recent stash, and =git
+stash pop= is the same as =git stash apply ; git stash drop= 
+
+You can apply other stashes by naming them with their =stash@{#}=
+name.
+
+You can turn stashed changes into a branch with the command =git stash
+branch <branchname>= if you want to split it from the branch it was in.
+
+
+* How to Push a New Local Branch to a Remote Git Repository
+
+Branch management in repositories is well described here:
+http://www.mariopareja.com/blog/archive/2010/01/11/how-to-push-a-new-local-branch-to-a-remote.aspx
 
 ** Pushing a Branch
 
@@ -96,13 +178,12 @@ remote repository. The second command creates a local branch named
 you want to be able to easily push and pull from the branch called
 =plugin= on GitHub.
 
+
 * Footnotes
 
-[fn:1] http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging
-
-[fn:2] http://www.mariopareja.com/blog/archive/2010/01/11/how-to-push-a-new-local-branch-to-a-remote.aspx
-
 [fn:3] http://git-scm.com/book/en/Git-Tools-Stashing
+
+[fn:4] http://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup
 
 
 
