@@ -1,4 +1,4 @@
-#+TITLE:     Git Commands
+#+TITLE:     A Gentle Introduction to Git at CAEN
 #+AUTHOR:    Andrew Caird
 #+EMAIL:     acaird@umich.edu
 #+DESCRIPTION:
@@ -12,6 +12,10 @@
 #+LINK_UP:   
 #+LINK_HOME: 
 #+XSLT:
+#+startup: beamer
+# #+LaTeX_CLASS: beamer
+# #+BEAMER_FRAME_LEVEL: 2
+# #+latex_header: \mode<beamer>{\usetheme{Frankfurt}}
 
 * Getting Started
 
@@ -38,23 +42,19 @@ directory to populate your git tree by using the commands =git add
 You can then use =git clone=, =git pull=, and =git push= to copy,
 update from, and update to your repository.
 
-** CAEN GitHub Repositories
+** Seeing the CAEN GitHub Repositories
 
-*** Seeing the CAEN GitHub Repositories
+The CAEN GitHub Repositories are listed at: [[https://github.com/CAEN/]]
 
-The CAEN GitHub Repositories are listed at:
-#+BEGIN_EXAMPLE
-    https://github.com/organizations/CAEN/
-#+END_EXAMPLE
 and looking at the list of repositories on the right-hand side of the
 page.  You will only see those repositories to which you have been
 granted access. 
 
-*** Checking out a CAEN GitHub Repository
+** Checking out a CAEN GitHub Repository
 
 To copy a repository from the CAEN GitHub project, you first need
 permissions.  As soon as you can see it in the list at
-https://github.com/organizations/CAEN/ you can copy it.
+[[https://github.com/CAEN/]] you can copy it.
 
 The command to copy a repository is:
 #+BEGIN_EXAMPLE
@@ -69,7 +69,7 @@ repository again from your copy, or allow others to clone your copy,
 and merge them back in later or not.  In most cases, you have files
 in Box or AFS and that isn't practical, though.
 
-*** Working with CAEN Repositories
+** Working with CAEN Repositories
 
 There are two recommended ways to work with CAEN Git Repositories.
 
@@ -87,11 +87,13 @@ Both of these methods are described in more detail below.
 
 * Basic Branching and Merging
 
+** Basic Branching and Merging References
+
 Basic Branching and Merging is well described here:
-http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging
+[[http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging]]
 
 
-** Creating and Using a Branch
+** Creating a Branch
 The command
    #+BEGIN_EXAMPLE
    $ git checkout -b iss53
@@ -103,6 +105,8 @@ git branch iss53
 git checkout iss53
 #+END_EXAMPLE
 
+** Using Branches
+
 The command =git branch= lists the branches; the one with the =*= by
 it is the active branch.  
 
@@ -111,8 +115,12 @@ The command =git checkout <branchname>= switches to another branch.
 The command =git diff <branchname>= shows the differences between the
 current branch and <branchname>.
 
+** Merging Branches
+
 To merge a branch with the current branch, type: =git merge
-<branchname>=.
+<branchname>=
+
+** An example workflow
 
 A common workflow is to do:
  - =git pull=
@@ -129,12 +137,14 @@ A common workflow is to do:
  - push your changes back to the origin with the command =git push=
 
 
-** Using =git stash= to switch branches without committing
+** Switching branches without committing
 
 To switch branches from a "dirty" branch without commiting the
 changes, simply type =git stash= [fn:3], which moves your changes off to the
 side, thus making your current branch clean so you can switch away
 from it.
+
+** Using =git stash=
 
 When you come back to that branch, you can type =git stash list= to
 see the things you've stashed and =git stash apply= to apply the most
@@ -148,22 +158,28 @@ You can turn stashed changes into a branch with the command =git stash
 branch <branchname>= if you want to split it from the branch it was in.
 
 
-* How to Push a New Local Branch to a Remote Git Repository
+* Pushing and Pulling
+
+** Branch Management
 
 Branch management in repositories is well described here:
-http://www.mariopareja.com/blog/archive/2010/01/11/how-to-push-a-new-local-branch-to-a-remote.aspx
+[[http://www.mariopareja.com/blog/archive/2010/01/11/how-to-push-a-new-local-branch-to-a-remote.aspx]]
 
 ** Pushing a Branch
 
-=git push -u origin plugin= tells git to push changes from your plugin
-branch to the plugin branch on the origin repository. If origin does
-not have a plugin branch, it is created on the fly. The =-u= tells git
-that you want to be able to easily push and pull changes to that
-branch in the future. (=-u= is the same as =--set-upstream= and adds
-a remote reference so the commands =git push= and =git pull= while in
-that branch locally will push to and pull from that branch
-remotely).  The name =plugin= is just an example; you can name your
-branch anything.
+#+BEGIN_EXAMPLE
+git push -u origin plugin
+#+END_EXAMPLE
+tells git to push changes from your plugin branch to the plugin branch
+on the origin repository.
+
+ - If origin does not have a plugin branch, it is created on the fly. 
+ - The =-u= tells git that you want to be able to easily push and pull
+   changes to that branch in the future. 
+ - =-u= is the same as =--set-upstream= and adds a remote reference so
+   the commands =git push= and =git pull= while in that branch locally
+   will push to and pull from that branch remotely).  
+ - The name =plugin= is just an example; you can name your branch anything.
 
 ** Pulling a Branch
 
@@ -173,17 +189,18 @@ git checkout --track origin/plugin
 #+END_EXAMPLE
 
 The first command updates your repository with the changes from the
-remote repository. The second command creates a local branch named
-=plugin= that matches the =origin/plugin= branch and tells git that
-you want to be able to easily push and pull from the branch called
-=plugin= on GitHub.
+remote repository. 
+
+The second command creates a local branch named =plugin= that matches
+the =origin/plugin= branch and tells git that you want to be able to
+easily push and pull from the branch called =plugin= on GitHub.
 
 
 * Footnotes
 
-[fn:3] http://git-scm.com/book/en/Git-Tools-Stashing
+[fn:3] [[http://git-scm.com/book/en/Git-Tools-Stashing]]
 
-[fn:4] http://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup
+[fn:4] [[http://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup]]
 
 
 
