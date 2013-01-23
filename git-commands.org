@@ -13,9 +13,9 @@
 #+LINK_HOME: 
 #+XSLT:
 #+startup: beamer
-# #+LaTeX_CLASS: beamer
-# #+BEAMER_FRAME_LEVEL: 2
-# #+latex_header: \mode<beamer>{\usetheme{Frankfurt}}
+#+LaTeX_CLASS: beamer
+#+BEAMER_FRAME_LEVEL: 2
+#+latex_header: \mode<beamer>{\usetheme{Frankfurt}}
 
 * Getting Started
 
@@ -109,6 +109,15 @@ git checkout iss53
 
 The command =git branch= lists the branches; the one with the =*= by
 it is the active branch.  
+#+BEGIN_EXAMPLE
+[acaird@Andrews-Mac researchcomputing (master)]$ git branch
+  acaird
+  agenda
+* master
+  paul
+  storage
+  webcontent
+#+END_EXAMPLE
 
 The command =git checkout <branchname>= switches to another branch.
 
@@ -162,8 +171,8 @@ branch <branchname>= if you want to split it from the branch it was in.
 
 ** Branch Management
 
-Branch management in repositories is well described here:
-[[http://www.mariopareja.com/blog/archive/2010/01/11/how-to-push-a-new-local-branch-to-a-remote.aspx]]
+Branch management in repositories is well described here: [[http://goo.gl/95003]]
+
 
 ** Pushing a Branch
 
@@ -195,6 +204,46 @@ The second command creates a local branch named =plugin= that matches
 the =origin/plugin= branch and tells git that you want to be able to
 easily push and pull from the branch called =plugin= on GitHub.
 
+
+* Resources
+
+** More Resources and Tips
+
+Git has a large community, so Google is your friend, but there are a
+few other things that are worth pointing out.
+
+** =bash= command prompt
+
+Git maintains a lot of state, but to see it you have to ask by
+running =git status=
+
+Two of the most used pieces of state information are the name of the
+branch you are on and whether that branch is "dirty" or not.
+
+Using advice from
+[[http://en.newinstance.it/2010/05/23/git-autocompletion-and-enhanced-bash-prompt/]]
+or the included (in some distributions) =git-completion.bash= can
+change your shell prompt when you are in a directory with a =.git/=
+directory to look like:
+
+#+BEGIN_EXAMPLE
+        [acaird@Andrews-Mac CAEN-Testing (acaird *)]$ 
+#+END_EXAMPLE
+
+In this case: 
+   - I am in the =CAEN-Testing= directory, which is a clone of the
+     =CAEN-Testing= git repository
+   - I am on the =acaird= branch
+   - The branch is dirty, as shown by the =*=
+
+** Git Books
+
+There are many books on Git, and several floating around CAEN if you
+want to look at them.
+
+I like *Pro Git* by Scott Chacon, in part because it is free in
+electronic forms (PDF, Mobi, and ePub), can be ordered from Amazon
+for about $20, and is online in HTML.  All of this is at [[http://git-scm.com/book]]
 
 * Footnotes
 
