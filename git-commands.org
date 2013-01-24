@@ -205,7 +205,7 @@ the =origin/plugin= branch and tells git that you want to be able to
 easily push and pull from the branch called =plugin= on GitHub.
 
 
-* Resources
+* Resources and Tips
 
 ** More Resources and Tips
 
@@ -244,6 +244,22 @@ want to look at them.
 I like *Pro Git* by Scott Chacon, in part because it is free in
 electronic forms (PDF, Mobi, and ePub), can be ordered from Amazon
 for about $20, and is online in HTML.  All of this is at [[http://git-scm.com/book]]
+
+** Abandoning Changes
+
+ - you can delete a whole branch with the =-D= option to =git branch=
+   like:
+#+BEGIN_EXAMPLE
+   $ git branch
+   * acaird
+   master
+   $ git checkout master
+   $ git branch -D acaird
+#+END_EXAMPLE
+ - you can revert a file in a modifited branch with the command
+#+BEGIN_EXAMPLE
+   $ git checkout -- MyFileName
+#+END_EXAMPLE
 
 * Footnotes
 
