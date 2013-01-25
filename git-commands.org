@@ -42,6 +42,22 @@ directory to populate your git tree by using the commands =git add
 You can then use =git clone=, =git pull=, and =git push= to copy,
 update from, and update to your repository.
 
+** Migrating an existing SVN Repository
+
+Use =svn2git= from: [[https://github.com/nirvdrum/svn2git]] to create
+a new git repository using the URL of an existing SVN repo.  The README
+file includes examples of how to convert SVN repos with non-standard
+layouts or to exclude certain files from the migration.
+
+Then create a new empty repo in github, and set the origin and push using:
+#+BEGIN_EXAMPLE
+  git remote add origin git@github.com:caen/REPO_NAME.git
+  git push origin master
+#+END_EXAMPLE
+
+More information and some best practices can be found at:
+[[https://help.github.com/articles/importing-from-subversion]]
+
 ** Seeing the CAEN GitHub Repositories
 
 The CAEN GitHub Repositories are listed at: [[https://github.com/CAEN/]]
@@ -235,6 +251,40 @@ In this case:
      =CAEN-Testing= git repository
    - I am on the =acaird= branch
    - The branch is dirty, as shown by the =*=
+
+The optional autocompletion feature is also a time saver, and can complete git
+commands, branch names, etc.
+
+** Mac OS X Users - installing git and bash prompt/autocomplete through XCode
+
+git is not installed by default, but is included in
+the free download of XCode in the Mac App Store.  After installing XCode, you then
+install the command line tools using the Downloads section in XCode's preferences.
+
+To install the autocomplete and git prompt features, you can then:
+#+BEGIN_EXAMPLE
+  curl -o ~/.git-completion.sh https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+  curl -o ~/.git-prompt.sh https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
+#+END_EXAMPLE
+
+Then, add the following lines to your =~/.profile=, creating the file if necessary:
+
+#+BEGIN_EXAMPLE
+  source ~/.git-completion.sh
+  source ~/.git-prompt.sh
+  GIT_PS1_SHOWDIRTYSTATE=true
+  PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+#+END_EXAMPLE
+
+** Enabling colors in the command line
+
+Many of the git commands can use color to make reading output more comfortable
+in the terminal, but not all installations have this enabled by default.
+
+To enable color:
+#+BEGIN_EXAMPLE
+  git config --global color.ui true
+#+END_EXAMPLE
 
 ** Git Books
 
