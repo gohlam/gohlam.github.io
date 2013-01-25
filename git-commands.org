@@ -19,6 +19,10 @@
 
 * Getting Started
 
+** What is Git
+
+  Fill this in
+
 ** One-time commands
 
 There are a few commands you'll run only once per system on which you
