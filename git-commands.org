@@ -273,7 +273,7 @@ Then, add the following lines to your =~/.profile=, creating the file if necessa
   source ~/.git-completion.sh
   source ~/.git-prompt.sh
   GIT_PS1_SHOWDIRTYSTATE=true
-  PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+  PS1='\[\033[32m\]\u@\h\[\033[00m\]:\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
 #+END_EXAMPLE
 
 To load the changes into the active terminal session, type:
