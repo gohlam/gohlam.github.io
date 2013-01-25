@@ -95,7 +95,7 @@ There are two recommended ways to work with CAEN Git Repositories.
 
  1. Do all your work locally in branches, and push the =master=
     branch to GitHub when you're done; this is described below.
- 2. Make a "master branch" for yourself, push the branch to GitHub,
+ 2. Make a "user branch" for yourself, push the branch to GitHub,
     do your work in that branch or branchs of that branch, merging in
     changes from the =master= branch from time to time, and when
     you'd like your branch merged into the =master= branch, ask the
@@ -130,13 +130,13 @@ git checkout iss53
 The command =git branch= lists the branches; the one with the =*= by
 it is the active branch.  
 #+BEGIN_EXAMPLE
-[acaird@Andrews-Mac researchcomputing (master)]$ git branch
-  acaird
-  agenda
-* master
-  paul
-  storage
-  webcontent
+  [acaird@Andrews-Mac researchcomputing (master)]$ git branch
+    acaird
+    agenda
+  * master
+    paul
+    storage
+    webcontent
 #+END_EXAMPLE
 
 The command =git checkout <branchname>= switches to another branch.
@@ -165,7 +165,6 @@ A common workflow is to do:
    branch with the command =git merge mybranch=
  - push your changes back to the origin with the command =git push=
 
-
 ** Switching branches without committing
 
 To switch branches from a "dirty" branch without commiting the
@@ -185,7 +184,6 @@ name.
 
 You can turn stashed changes into a branch with the command =git stash
 branch <branchname>= if you want to split it from the branch it was in.
-
 
 * Pushing and Pulling
 
@@ -261,23 +259,28 @@ commands, branch names, etc.
 
 ** Mac OS X Users - installing git through XCode
 
-git is not installed by default, but is included in
-the free download of XCode in the Mac App Store.  After installing XCode, you then
-install the command line tools using the Downloads section in XCode's preferences.
+git is not installed by default, but is included in the free download
+of XCode in the Mac App Store.  After installing XCode, you then
+install the command line tools using the Downloads section in XCode's
+preferences.
 
 To install the autocomplete and git prompt features, you can then:
 #+BEGIN_EXAMPLE
-  curl -o ~/.git-completion.sh https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
-  curl -o ~/.git-prompt.sh https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
+  curl -o ~/.git-completion.sh \
+     https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+  curl -o ~/.git-prompt.sh \
+     https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
 #+END_EXAMPLE
 
-Then, add the following lines to your =~/.profile=, creating the file if necessary:
+Then, add the following lines to your =~/.profile=, creating the file
+if necessary:
 
 #+BEGIN_EXAMPLE
   source ~/.git-completion.sh
   source ~/.git-prompt.sh
   GIT_PS1_SHOWDIRTYSTATE=true
-  PS1='\[\033[32m\]\u@\h\[\033[00m\]:\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+  PS1='\[\033[32m\]\u@\h\[\033[00m\]:\w\[\033[31m\]$ \
+      (__git_ps1)\[\033[00m\]\$ '
 #+END_EXAMPLE
 
 To load the changes into the active terminal session, type:
@@ -296,15 +299,6 @@ To enable color:
   git config --global color.ui true
 #+END_EXAMPLE
 
-** Git Books
-
-There are many books on Git, and several floating around CAEN if you
-want to look at them.
-
-I like *Pro Git* by Scott Chacon, in part because it is free in
-electronic forms (PDF, Mobi, and ePub), can be ordered from Amazon
-for about $20, and is online in HTML.  All of this is at [[http://git-scm.com/book]]
-
 ** Abandoning Changes
 
  - you can delete a whole branch with the =-D= option to =git branch=
@@ -320,6 +314,15 @@ for about $20, and is online in HTML.  All of this is at [[http://git-scm.com/bo
 #+BEGIN_EXAMPLE
    $ git checkout -- MyFileName
 #+END_EXAMPLE
+
+** Git Books
+
+There are many books on Git, and several floating around CAEN if you
+want to look at them.
+
+I like *Pro Git* by Scott Chacon, in part because it is free in
+electronic forms (PDF, Mobi, and ePub), can be ordered from Amazon
+for about $20, and is online in HTML.  All of this is at [[http://git-scm.com/book]]
 
 * Footnotes
 
