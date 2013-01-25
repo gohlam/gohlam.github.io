@@ -255,7 +255,7 @@ In this case:
 The optional autocompletion feature is also a time saver, and can complete git
 commands, branch names, etc.
 
-** Mac OS X Users - installing git and bash prompt/autocomplete through XCode
+** Mac OS X Users - installing git through XCode
 
 git is not installed by default, but is included in
 the free download of XCode in the Mac App Store.  After installing XCode, you then
@@ -274,6 +274,12 @@ Then, add the following lines to your =~/.profile=, creating the file if necessa
   source ~/.git-prompt.sh
   GIT_PS1_SHOWDIRTYSTATE=true
   PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+#+END_EXAMPLE
+
+To load the changes into the active terminal session, type:
+
+#+BEGIN_EXAMPLE
+  source ~/.profile
 #+END_EXAMPLE
 
 ** Enabling colors in the command line
