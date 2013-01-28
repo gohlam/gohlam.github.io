@@ -13,9 +13,9 @@
 #+LINK_HOME: 
 #+XSLT:
 #+startup: beamer
-# #+LaTeX_CLASS: beamer
-# #+BEAMER_FRAME_LEVEL: 2
-# #+latex_header: \mode<beamer>{\usetheme{Frankfurt}}
+#+LaTeX_CLASS: beamer
+#+BEAMER_FRAME_LEVEL: 2
+#+latex_header: \mode<beamer>{\usetheme{Frankfurt}}
 
 * Getting Started
 
