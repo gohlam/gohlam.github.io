@@ -13,15 +13,31 @@
 #+LINK_HOME: 
 #+XSLT:
 #+startup: beamer
-#+LaTeX_CLASS: beamer
-#+BEAMER_FRAME_LEVEL: 2
-#+latex_header: \mode<beamer>{\usetheme{Frankfurt}}
+# #+LaTeX_CLASS: beamer
+# #+BEAMER_FRAME_LEVEL: 2
+# #+latex_header: \mode<beamer>{\usetheme{Frankfurt}}
 
 * Getting Started
 
 ** What is Git
 
-  Fill this in
+What is Git?
+ - Git is a free distributed version control system.
+ - Git manages collections of text files (known as repositories) so
+   many people can work on them and they can be merged together again
+   if needed, and all changes are tracked and can be seen at any time.
+ - The distributed nature of Git means that if you get a copy of a
+   Git project (also known as a copy, or a clone, or a pull), you:
+   - get the entirety of the project, including all of the history
+   - you become a "master repository", since every project is a
+     "master repository"
+
+** What is Git?
+
+#+LaTeX:\begin{center}
+#+ATTR_LaTeX: height=0.5\textwidth
+[[file:git-diagram.png]]
+#+LaTeX:\end{center}
 
 ** One-time commands
 
@@ -103,7 +119,6 @@ There are two recommended ways to work with CAEN Git Repositories.
     he can make sure your changes are appropriate.
 
 Both of these methods are described in more detail below.
-
 
 * Basic Branching and Merging
 
@@ -222,7 +237,6 @@ The second command creates a local branch named =plugin= that matches
 the =origin/plugin= branch and tells git that you want to be able to
 easily push and pull from the branch called =plugin= on GitHub.
 
-
 * Resources and Tips
 
 ** More Resources and Tips
@@ -235,17 +249,19 @@ few other things that are worth pointing out.
 Git maintains a lot of state, but to see it you have to ask by
 running =git status=
 
-Two of the most used pieces of state information are the name of the
-branch you are on and whether that branch is "dirty" or not.
+Two of the most used pieces of state information are:
+ - the name of the branch you are on
+ - whether that branch is "dirty" or not.
 
 Using advice from
 [[http://en.newinstance.it/2010/05/23/git-autocompletion-and-enhanced-bash-prompt/]]
-or the included (in some distributions) =git-completion.bash= can
+or the included (in some distributions) =git-completion.bash= you can
 change your shell prompt when you are in a directory with a =.git/=
 directory to look like:
 
+** =bash= command prompt
 #+BEGIN_EXAMPLE
-        [acaird@Andrews-Mac CAEN-Testing (acaird *)]$ 
+  [acaird@Andrews-Mac CAEN-Testing (acaird *)]$ 
 #+END_EXAMPLE
 
 In this case: 
@@ -254,23 +270,24 @@ In this case:
    - I am on the =acaird= branch
    - The branch is dirty, as shown by the =*=
 
-The optional autocompletion feature is also a time saver, and can complete git
-commands, branch names, etc.
+The optional autocompletion feature is also a time saver, and can
+complete git commands, branch names, etc.
 
 ** Mac OS X Users - installing git through XCode
 
-git is not installed by default, but is included in the free download
-of XCode in the Mac App Store.  After installing XCode, you then
-install the command line tools using the Downloads section in XCode's
-preferences.
+git is not installed by default with OS X, but is included in the free
+download of XCode in the Mac App Store.  After installing XCode, you
+then install the command line tools using the Downloads section in
+XCode's preferences.
 
+** Mac OS X Users - Getting the git prompt
 To install the autocomplete and git prompt features, you can then:
+#+LaTeX:\tiny
 #+BEGIN_EXAMPLE
-  curl -o ~/.git-completion.sh \
-     https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
-  curl -o ~/.git-prompt.sh \
-     https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
+curl -o ~/.git-completion.sh https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+curl -o ~/.git-prompt.sh https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
 #+END_EXAMPLE
+#+LaTeX: \normalsize
 
 Then, add the following lines to your =~/.profile=, creating the file
 if necessary:
