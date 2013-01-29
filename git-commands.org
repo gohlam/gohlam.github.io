@@ -296,9 +296,12 @@ if necessary:
   source ~/.git-completion.sh
   source ~/.git-prompt.sh
   GIT_PS1_SHOWDIRTYSTATE=true
-  PS1='\[\033[32m\]\u@\h\[\033[00m\]:\w\[\033[31m\]$ \
-      (__git_ps1)\[\033[00m\]\$ '
 #+END_EXAMPLE
+#+LaTeX:\tiny
+#+BEGIN_EXAMPLE
+  PS1='\[\033[32m\]\u@\h\[\033[00m\]:\w\[\033[31m\]$ (__git_ps1)\[\033[00m\]\$ '
+#+END_EXAMPLE
+#+LaTeX: \normalsize
 
 To load the changes into the active terminal session, type:
 
@@ -349,6 +352,10 @@ for about $20, and is online in HTML.  All of this is at [[http://git-scm.com/bo
 
  - Also, I know for a fact that the Linux Systems and HPC Groups use
    =git=, so you can ask them for help, too.
+
+ - Good email address:
+   - =caen-git-users@umich.edu=
+   - to get added to that, email =caen-git-admin@umich.edu=
 
 * Footnotes
 
