@@ -18,10 +18,9 @@
 #+latex_header: \mode<beamer>{\usetheme{Frankfurt}}
 
 * Getting Started
-
+ =git clone mistakes-and-lies=
 ** What is Git
 
-What is Git?
  - Git is a free distributed version control system.
  - Git manages collections of text files (known as repositories) so
    many people can work on them and they can be merged together again
@@ -29,15 +28,8 @@ What is Git?
  - The distributed nature of Git means that if you get a copy of a
    Git project (also known as a copy, or a clone, or a pull), you:
    - get the entirety of the project, including all of the history
-   - you become a "master repository", since every project is a
-     "master repository"
-
-** What is Git?
-
-#+LaTeX:\begin{center}
-#+ATTR_LaTeX: height=0.5\textwidth
-[[file:git-diagram.png]]
-#+LaTeX:\end{center}
+   - you become a "master repository", since every copy is a "master
+     repository"
 
 ** One-time commands
 
@@ -71,7 +63,7 @@ layouts or to exclude certain files from the migration.
 
 Then create a new empty repo in github, and set the origin and push using:
 #+BEGIN_EXAMPLE
-  git remote add origin git@github.com:caen/REPO_NAME.git
+  git remote add origin <you>@github.com:caen/REPO_NAME.git
   git push origin master
 #+END_EXAMPLE
 
@@ -102,15 +94,15 @@ repository.
 
 There are no "master" repositories in Git, so you can clone the
 repository again from your copy, or allow others to clone your copy,
-and merge them back in later or not.  In most cases, you have files
-in Box or AFS and that isn't practical, though.
+and merge them back in later or not.  In most cases, you have files in
+Box or AFS so sharing isn't very practical.
 
 ** Working with CAEN Repositories
 
 There are two recommended ways to work with CAEN Git Repositories.
 
  1. Do all your work locally in branches, and push the =master=
-    branch to GitHub when you're done; this is described below.
+    branch to GitHub when you're done.
  2. Make a "user branch" for yourself, push the branch to GitHub,
     do your work in that branch or branchs of that branch, merging in
     changes from the =master= branch from time to time, and when
@@ -126,7 +118,6 @@ Both of these methods are described in more detail below.
 
 Basic Branching and Merging is well described here:
 [[http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging]]
-
 
 ** Creating a Branch
 The command
@@ -157,7 +148,7 @@ it is the active branch.
 The command =git checkout <branchname>= switches to another branch.
 
 The command =git diff <branchname>= shows the differences between the
-current branch and <branchname>.
+current branch and =<branchname>=.
 
 ** Merging Branches
 
@@ -189,39 +180,41 @@ from it.
 
 ** Using =git stash=
 
-When you come back to that branch, you can type =git stash list= to
-see the things you've stashed and =git stash apply= to apply the most
-recent stash.  =git stash drop= drops the most recent stash, and =git
-stash pop= is the same as =git stash apply ; git stash drop= 
+ - =git stash list= lists the things you've stashed 
+ - =git stash apply=  applies the most recent stash to the current
+   branch
+ - =git stash drop= deletes the most recent stash
+ - =gitstash pop= is the same as =git stash apply ; git stash drop= 
 
-You can apply other stashes by naming them with their =stash@{#}=
-name.
+ - You can apply other stashes by naming them with their =stash@{#}=
+   name
 
-You can turn stashed changes into a branch with the command =git stash
-branch <branchname>= if you want to split it from the branch it was in.
+ - You can turn stashed changes into a branch with the command =git
+   stash branch <branchname>= if you want to split it from the branch
+   it was in. 
 
 * Pushing and Pulling
-
 ** Branch Management
 
 Branch management in repositories is well described here: [[http://goo.gl/95003]]
 
-
 ** Pushing a Branch
 
+Using the name =plugin= for our example branch (=git checkout -b
+plugin=) the command:
 #+BEGIN_EXAMPLE
 git push -u origin plugin
 #+END_EXAMPLE
-tells git to push changes from your plugin branch to the plugin branch
-on the origin repository.
+tells git to push changes from your =plugin= branch to the =plugin=
+branch on the origin repository.
 
- - If origin does not have a plugin branch, it is created on the fly. 
+ - If origin does not have a =plugin= branch, it is created on the
+   fly.
  - The =-u= tells git that you want to be able to easily push and pull
    changes to that branch in the future. 
  - =-u= is the same as =--set-upstream= and adds a remote reference so
    the commands =git push= and =git pull= while in that branch locally
    will push to and pull from that branch remotely).  
- - The name =plugin= is just an example; you can name your branch anything.
 
 ** Pulling a Branch
 
@@ -236,6 +229,13 @@ remote repository.
 The second command creates a local branch named =plugin= that matches
 the =origin/plugin= branch and tells git that you want to be able to
 easily push and pull from the branch called =plugin= on GitHub.
+
+** What does all that look like
+
+#+LaTeX:\begin{center}
+#+ATTR_LaTeX: height=0.5\textwidth
+[[file:git-diagram.png]]
+#+LaTeX:\end{center}
 
 * Resources and Tips
 
@@ -340,6 +340,15 @@ want to look at them.
 I like *Pro Git* by Scott Chacon, in part because it is free in
 electronic forms (PDF, Mobi, and ePub), can be ordered from Amazon
 for about $20, and is online in HTML.  All of this is at [[http://git-scm.com/book]]
+
+** CAEN Staff
+
+
+ - Thanks to Dan Maletta, Phil Trieb, and Tom Knox for their help with
+   these slides. 
+
+ - Also, I know for a fact that the Linux Systems and HPC Groups use
+   =git=, so you can ask them for help, too.
 
 * Footnotes
 
