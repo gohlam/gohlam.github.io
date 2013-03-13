@@ -1,0 +1,92 @@
+#   -*- mode: org; fill-column: 78 -*-
+#+TITLE:     Org in 4 Sections
+#+AUTHOR:    Andrew Caird
+#+EMAIL:     acaird@umich.edu
+#+DATE:      2013-03-13 Wed
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:1 \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+
+
+* Getting Org
+
+** Emacs
+
+** Org-mode
+
+** Useful configurations
+
+* Sections, Subsections, Lists, etc.
+
+It is plain text, so a section is set up with an asterisk =*=, a
+subsection is two asterisks =**=, etc.  
+
+A bulleted list is started with any of a dash =-=, a plus =+=, and
+sublists are just indented.
+
+A numbered list is started with numbers.  Sub-lists with numbers are
+intented one or more spaces.
+
+#+BEGIN_EXAMPLE
+
+* Section Title
+
+Some text that I would like to add.
+
+Here is a list
+ - item one
+ - item two
+ - item three
+   - subitem one
+
+** Sub-Section Title
+
+#+END_EXAMPLE
+
+
+* Tables
+
+# http://www.onlydriveconvertibles.com/convertiblecars.cfm?Seats=4&Status=Current
+# http://www.autotrader.com/research/article/best-cars/190044/top-6-four-seat-convertibles-for-20000.jsp
+
+#+BEGIN_EXAMPLE
+  |-----------+-----------+------+----------|
+  |           | Top Speed | Cost | X-factor |
+  |-----------+-----------+------+----------|
+  | Fiat 500  |           |      |          |
+  | Volvo C70 |           |      |          |
+  | VW EOS    |           |      |          |
+  | VW Bug    |           |      |          |
+  |-----------+-----------+------+----------|
+
+#+END_EXAMPLE
+
+
+
+** Alignment
+
+* Exports
+
+** PDF
+
+** HTML
+
+** ASCII
+
+** Pandoc
+* Demo
+
+** Keystrokes
+
+ - esc-enter
+ - tab
+ - esc-arrows
+ - C-c C-e
