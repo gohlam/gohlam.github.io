@@ -1,5 +1,5 @@
 #   -*- mode: org; fill-column: 78 -*-
-#+TITLE:     Org in 4 Sections
+#+TITLE:     Org in 4 Sections (plus a demo)
 #+AUTHOR:    Andrew Caird
 #+EMAIL:     acaird@umich.edu
 #+DATE:      2013-03-13 Wed
@@ -18,13 +18,29 @@
 
 * Getting Org
 
+Org is an Emacs mode, so you need Emacs and the Org package.
+
 ** Emacs
+
+ + Windows :: get emacs
+ + Mac :: Use ports
+ + Linux :: get emacs
 
 ** Org-mode
 
+ + Windows :: get org files by doing something
+ + Mac :: Use ports
+ + Linux :: get org files by doing something
+
 ** Useful configurations
 
-* Sections, Subsections, Lists, etc.
+It's all emacs, so configuration is done in your =~/.emacs= file.
+
+*** Wrapping lines
+
+*** Export Settings
+
+* Sections, Subsections, Lists, and Formatting
 
 It is plain text, so a section is set up with an asterisk =*=, a
 subsection is two asterisks =**=, etc.  
@@ -37,20 +53,27 @@ intented one or more spaces.
 
 #+BEGIN_EXAMPLE
 
-* Section Title
+ * Section Title
 
-Some text that I would like to add.
+ Some text that I would like to add.
 
-Here is a list
- - item one
- - item two
- - item three
-   - subitem one
+ The second paragraph of the text I'd like to add.
 
-** Sub-Section Title
+ # this is a comment
+
+ Here is a list
+  - item one
+  - item two
+  - item three
+    - subitem one
+
+ ** Sub-Section Title
+
+  1. item one
+  2. item two
+     1. item two-sub-one
 
 #+END_EXAMPLE
-
 
 * Tables
 
@@ -58,20 +81,33 @@ Here is a list
 # http://www.autotrader.com/research/article/best-cars/190044/top-6-four-seat-convertibles-for-20000.jsp
 
 #+BEGIN_EXAMPLE
-  |-----------+-----------+------+----------|
-  |           | Top Speed | Cost | X-factor |
-  |-----------+-----------+------+----------|
-  | Fiat 500  |           |      |          |
-  | Volvo C70 |           |      |          |
-  | VW EOS    |           |      |          |
-  | VW Bug    |           |      |          |
-  |-----------+-----------+------+----------|
+  |-----------+-----------+------+-----+----------|
+  |           | Top Speed | Cost | MPG | X-factor |
+  |-----------+-----------+------+-----+----------|
+  | Fiat 500  |           |      |     |          |
+  | Volvo C70 |           |      |     |          |
+  | VW EOS    |           |      |     |          |
+  | VW Bug    |           |      |     |          |
+  |-----------+-----------+------+-----+----------|
 
 #+END_EXAMPLE
 
+** Alignment in Tables
+
+*** LaTeX
+
+*** Org
 
 
-** Alignment
+** Formatting
+
+|----------+--------------|
+| Format   | What to Type |
+|----------+--------------|
+| *Bold*   | * Bold *     |
+| /Italic/ | / Italic /   |
+| =Fixed=  | = Fixed =    |
+|----------+--------------|
 
 * Exports
 
