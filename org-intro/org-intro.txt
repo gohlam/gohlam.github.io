@@ -42,8 +42,8 @@ It's all emacs, so configuration is done in your =~/.emacs= file.
 
 * Sections, Subsections, Lists, and Formatting
 
-It is plain text, so a section is set up with an asterisk =*=, a
-subsection is two asterisks =**=, etc.  
+It is plain text, so a section is set up with an asterisk =*= at the start of
+a line, a subsection is two asterisks =**= at the start of a line, etc.
 
 A bulleted list is started with any of a dash =-=, a plus =+=, and
 sublists are just indented.
@@ -75,6 +75,18 @@ intented one or more spaces.
 
 #+END_EXAMPLE
 
+** Formatting
+
+|----------+--------------|
+| Format   | What to Type |
+|----------+--------------|
+| *Bold*   | * Bold *     |
+| /Italic/ | / Italic /   |
+| =Fixed=  | = Fixed =    |
+|----------+--------------|
+
+
+
 * Tables
 
 # http://www.onlydriveconvertibles.com/convertiblecars.cfm?Seats=4&Status=Current
@@ -99,30 +111,47 @@ intented one or more spaces.
 *** Org
 
 
-** Formatting
-
-|----------+--------------|
-| Format   | What to Type |
-|----------+--------------|
-| *Bold*   | * Bold *     |
-| /Italic/ | / Italic /   |
-| =Fixed=  | = Fixed =    |
-|----------+--------------|
-
 * Exports
 
 ** PDF
 
+Generating PDF requires a LaTeX installation.
+  + Windows :: 
+  + Mac ::  http://www.tug.org/mactex/
+  + Linux :: your favorite package manager
+
 ** HTML
+
+Type =Ctrl-c Ctrl-e= to see the export menu and choose from one of these
+options: 
+#+BEGIN_EXAMPLE
+[h] export as HTML      [H] to temporary buffer   [R] export region
+[b] export as HTML and open in browser
+#+END_EXAMPLE
 
 ** ASCII
 
-** Pandoc
-* Demo
+Type =Ctrl-c Ctrl-e= to see the export menu and choose from one of these
+options: 
+#+BEGIN_EXAMPLE
+[a/n/u] export as ASCII/Latin-1/UTF-8         [A/N/U] to temporary buffer
+#+END_EXAMPLE
 
+** Pandoc
+
+*Pandoc* isn't an Emacs or Org-mode tool, but it is a file conversion
+tool that is aware of Org-mode and can convert to and from many, many
+formats.  
+
+For more information, see [[johnmacfarlane.net/pandoc/][johnmacfarlane.net/pandoc/]].
+
+* Demo
 ** Keystrokes
 
- - esc-enter
- - tab
- - esc-arrows
- - C-c C-e
+ | esc-enter     | make another entry at the same level      |
+ | tab           | open or close a section                   |
+ | esc-arrows    | indent or outdent a section               |
+ | Ctrl-c Ctrl-e | export the current file to another format |
+ | Ctrl-g        | cancel the current command                |
+ | Ctrl-x Ctrl-s | save the file                             |
+ | Ctrl-x Ctrl-c | quit Emacs                                |
