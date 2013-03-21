@@ -22,14 +22,14 @@
 * Getting Org
 
 Org is an Emacs mode, so you need Emacs and the Org package.
-
  + Windows :: get emacs from [[http://ftp.gnu.org/gnu/emacs/windows/][ftp.gnu.org/gnu/emacs/windows/]]
  + Mac :: Use Mac Ports ([[http://www.macports.org][macports.org]])
  + Linux :: get emacs via your favorite package manager
 
 ** Org-mode
 
- + Windows :: The Org-mode files come with the installation
+ + Windows :: The Org-mode files come with the Emacs installation from
+              =ftp.gnu.org= 
  + Mac :: Use Mac Ports and install the =org-mode= package
  + Linux :: Either the Org-mode files will come with the Emacs you install,
             or you can get them from the package manager
