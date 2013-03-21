@@ -5,7 +5,7 @@
 #+DESCRIPTION:
 #+KEYWORDS:
 #+LANGUAGE:  en
-#+OPTIONS:   H:3 num:t toc:1 \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
 #+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
 #+EXPORT_SELECT_TAGS: export
@@ -13,13 +13,15 @@
 #+LINK_UP:   
 #+LINK_HOME: 
 #+XSLT:
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+BEAMER_FRAME_LEVEL: 2
+#+latex_header: \mode<beamer>{\usetheme{Frankfurt}}
 
 
 * Getting Org
 
 Org is an Emacs mode, so you need Emacs and the Org package.
-
-** Emacs
 
  + Windows :: get emacs
  + Mac :: Use ports
@@ -36,14 +38,14 @@ Org is an Emacs mode, so you need Emacs and the Org package.
 It's all emacs, so configuration is done in your =~/.emacs= file.
 
 #+BEGIN_EXAMPLE
-   (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
+   (add-to-list 'auto-mode-alist \
+           '("\\.\\(org\\|txt\\)$" . org-mode))
    (add-hook 'org-mode-hook 'turn-on-auto-fill)
    (require 'org-latex)
 #+END_EXAMPLE
 
 Those three lines will:
- - enter org-mode when you open a file ending in =.org=,
-   =.org_archive=, or =.txt=
+ - enter org-mode when you open a file ending in =.org= or =.txt=
  - turn =auto-fill-mode= on in Emacs when you're in org-mode
  - import =org-latex= 
 
@@ -88,14 +90,14 @@ intented one or more spaces.
 
 ** Formatting
 
-|--------------+----------------|
-| Format       | What to Type   |
-|--------------+----------------|
-| *Bold*       | * Bold *       |
-| /Italic/     | / Italic /     |
-| =Fixed=      | = Fixed =      |
-| _underlined_ | _ underlined _ |
-|--------------+----------------|
+|--------------+------------------|
+| Format       | What to Type     |
+|--------------+------------------|
+| *Bold*       | * Bold *         |
+| /Italic/     | / Italic /       |
+| =Fixed=      | = Fixed =        |
+| _underlined_ | \_ underlined \_ |
+|--------------+------------------|
 
 * Tables
 
@@ -103,27 +105,29 @@ intented one or more spaces.
 # http://www.autotrader.com/research/article/best-cars/190044/top-6-four-seat-convertibles-for-20000.jsp
 
 #+BEGIN_EXAMPLE
-  |--------------------+---------+----------+----------|
-  | Car Make and Model | Cost    | City MPG | X-factor |
-  |--------------------+---------+----------+----------|
-  | Fiat 500           | $19,000 |       30 |        6 |
-  | VW Bug             | $26,390 |       20 |        7 |
-  | VW EOS             | $33,995 |       22 |        5 |
-  | Volvo C70          | $39,950 |       20 |        5 |
-  | Audi A5 Cabrio     | $42,000 |       22 |        9 |
-  |--------------------+---------+----------+----------|
+  |--------------------+---------+------+----------|
+  | Car Make and Model | Cost    | City | X-factor |
+  |                    |         | MPG  |          |
+  |--------------------+---------+------+----------|
+  | Fiat 500           | $19,000 |   30 |        6 |
+  | VW Bug             | $26,390 |   20 |        7 |
+  | VW EOS             | $33,995 |   22 |        5 |
+  | Volvo C70          | $39,950 |   20 |        5 |
+  | Audi A5 Cabrio     | $42,000 |   22 |        9 |
+  |--------------------+---------+------+----------|
 
 #+END_EXAMPLE
 
-  |--------------------+---------+----------+----------|
-  | Car Make and Model | Cost    | City MPG | X-factor |
-  |--------------------+---------+----------+----------|
-  | Fiat 500           | $19,000 |       30 |        6 |
-  | VW Bug             | $26,390 |       20 |        7 |
-  | VW EOS             | $33,995 |       22 |        5 |
-  | Volvo C70          | $39,950 |       20 |        5 |
-  | Audi A5 Cabrio     | $42,000 |       22 |        9 |
-  |--------------------+---------+----------+----------|
+  |--------------------+---------+------+----------|
+  | Car Make and Model | Cost    | City | X-factor |
+  |                    |         | MPG  |          |
+  |--------------------+---------+------+----------|
+  | Fiat 500           | $19,000 |   30 |        6 |
+  | VW Bug             | $26,390 |   20 |        7 |
+  | VW EOS             | $33,995 |   22 |        5 |
+  | Volvo C70          | $39,950 |   20 |        5 |
+  | Audi A5 Cabrio     | $42,000 |   22 |        9 |
+  |--------------------+---------+------+----------|
 
 * Exports
 ** Export Template
@@ -142,8 +146,8 @@ Generating PDF requires a LaTeX installation.
 Type =Ctrl-c Ctrl-e= to see the export menu and choose from one of these
 options: 
 #+BEGIN_EXAMPLE
-[h] export as HTML      [H] to temporary buffer   [R] export region
-[b] export as HTML and open in browser
+[h] export as HTML  [H] to temporary buffer
+[R] export region   [b] export as HTML and open in browser
 #+END_EXAMPLE
 
 ** ASCII
@@ -151,7 +155,8 @@ options:
 Type =Ctrl-c Ctrl-e= to see the export menu and choose from one of these
 options: 
 #+BEGIN_EXAMPLE
-[a/n/u] export as ASCII/Latin-1/UTF-8         [A/N/U] to temporary buffer
+[a/n/u] export as ASCII/Latin-1/UTF-8
+[A/N/U] to temporary buffer
 #+END_EXAMPLE
 
 ** Pandoc
@@ -161,6 +166,15 @@ tool that is aware of Org-mode and can convert to and from many, many
 formats.  
 
 For more information, see [[http://johnmacfarlane.net/pandoc/][johnmacfarlane.net/pandoc/]].
+
+ | From             | To                      |
+ |------------------+-------------------------|
+ | markdown         | HTML formats            |
+ | reStructuredText | ODT, DOCX               |
+ | textile          | LaTeX                   |
+ | HTML             | PDF                     |
+ | LaTeX            | Markdown, RST, AsciiDoc |
+ | etc.             | etc.                    |
 
 * Demo
 ** Keystrokes
