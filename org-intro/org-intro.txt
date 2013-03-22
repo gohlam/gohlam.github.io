@@ -186,7 +186,7 @@ For more information, see [[http://johnmacfarlane.net/pandoc/][johnmacfarlane.ne
  | LaTeX            | Markdown, RST, AsciiDoc |
  | etc.             | etc.                    |
 
-* Demo
+* Demo and Resources
 ** Keystrokes
 
  | esc-enter     | make another entry at the same level      |
