@@ -21,6 +21,8 @@
 # #+LATEX_HEADER: \usepackage{fancyhdr}
 # #+LATEX_HEADER: \pagestyle{fancyplain}
 
+# pdfjam --nup '2x1' --landscape --suffix book --trim '2cm 2cm 2cm 2cm'
+# --clip true --papersize '{11in,17in}'  org-intro.pdf '2,3,4,1'
 * Getting Org
 ** Emacs
 Org is an Emacs mode, so you need Emacs and the Org package.
@@ -41,10 +43,9 @@ Org is an Emacs mode, so you need Emacs and the Org package.
 It's all emacs, so configuration is done in your =~/.emacs= file.
 
 #+BEGIN_EXAMPLE
-   (add-to-list 'auto-mode-alist \
-           '("\\.\\(org\\|txt\\)$" . org-mode))
-   (add-hook 'org-mode-hook 'turn-on-auto-fill)
-   (require 'org-latex)
+ (add-to-list 'auto-mode-alist '("\\.\\(org\\|txt\\)$" . org-mode))
+ (add-hook 'org-mode-hook 'turn-on-auto-fill)
+ (require 'org-latex)
 #+END_EXAMPLE
 
 Those three lines will:
@@ -196,6 +197,7 @@ For more information, see [[http://johnmacfarlane.net/pandoc/][johnmacfarlane.ne
  | esc-arrows    | indent or outdent a section               |
  | Ctrl-c Ctrl-e | export the current file to another format |
  | Ctrl-g        | cancel the current command                |
+ | Ctrl-x Ctrl-f | open a file                               |
  | Ctrl-x Ctrl-s | save the file                             |
  | Ctrl-x Ctrl-c | quit Emacs                                |
 
