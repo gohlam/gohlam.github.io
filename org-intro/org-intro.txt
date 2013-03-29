@@ -1,0 +1,209 @@
+#   -*- mode: org; fill-column: 78 -*-
+#+TITLE:     Org in 4 Sections (plus a demo)
+#+AUTHOR:    Andrew Caird
+#+EMAIL:     acaird@umich.edu
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+#+startup: beamer
+# #+LaTeX_CLASS: beamer
+# #+BEAMER_FRAME_LEVEL: 2
+# #+latex_header: \mode<beamer>{\usetheme{Frankfurt}}
+# #+LATEX_CLASS:  tufte-handout
+# #+LATEX_HEADER: \usepackage{fancyhdr}
+# #+LATEX_HEADER: \pagestyle{fancyplain}
+
+# pdfjam --nup '2x1' --landscape --suffix book --trim '2cm 2cm 2cm 2cm'
+# --clip true --papersize '{11in,17in}'  org-intro.pdf '2,3,4,1'
+* Getting Org
+** Emacs
+Org is an Emacs mode, so you need Emacs and the Org package.
+ + Windows :: get emacs from [[http://ftp.gnu.org/gnu/emacs/windows/][ftp.gnu.org/gnu/emacs/windows/]]
+ + Mac :: Use Mac Ports ([[http://www.macports.org][macports.org]]) (=port install emacs=)
+ + Linux :: get emacs via your favorite package manager
+
+** Org-mode
+
+ + Windows :: The Org-mode files come with the Emacs installation from
+              =ftp.gnu.org= 
+ + Mac :: Use Mac Ports and install the =org-mode= package (=port install org-mode=)
+ + Linux :: Either the Org-mode files will come with the Emacs you install,
+            or you can get them from the package manager
+
+** Useful configurations
+
+It's all emacs, so configuration is done in your =~/.emacs= file.
+
+#+BEGIN_EXAMPLE
+ (add-to-list 'auto-mode-alist '("\\.\\(org\\|txt\\)$" . org-mode))
+ (add-hook 'org-mode-hook 'turn-on-auto-fill)
+ (require 'org-latex)
+#+END_EXAMPLE
+
+Those three lines will:
+ - enter org-mode when you open a file ending in =.org= or =.txt=
+ - turn =auto-fill-mode= on in Emacs when you're in org-mode
+ - import =org-latex= 
+
+You can also enter org-mode by typing =Esc-x= or =Meta-x= followed by typing
+=org-mode=. 
+
+When typing in emacs, you can re-wrap lines of text with =Esc-q= or =Meta-q=.
+
+* Sections, Subsections, Lists, and Formatting
+** Sections and Lists
+
+ - It is plain text, so a section is set up with an asterisk =*= at the start
+   of a line, a subsection is two asterisks =**= at the start of a line, etc.
+
+ - A bulleted list is started with any of a dash =-=, a plus =+=, and sublists
+   are just indented.
+
+ - A numbered list is started with numbers.  Sub-lists with numbers are
+   intented one or more spaces.
+
+** Example
+
+#+BEGIN_EXAMPLE
+
+ * Section Title
+
+   Some text that I would like to add.
+
+   The second paragraph of the text I'd like to add.
+   # this is a comment
+   Here is a list
+    - item one
+    - item two
+      - subitem one
+
+   ** Sub-Section Title
+    1. item one
+    2. item two
+      1. item two-sub-one
+#+END_EXAMPLE
+
+** Formatting
+
+|--------------+------------------|
+| Format       | What to Type     |
+|--------------+------------------|
+| *Bold*       | * Bold *         |
+| /Italic/     | / Italic /       |
+| =Fixed=      | = Fixed =        |
+| _underlined_ | \_ underlined \_ |
+|--------------+------------------|
+
+* Tables
+** Tables
+# http://www.onlydriveconvertibles.com/convertiblecars.cfm?Seats=4&Status=Current
+# http://www.autotrader.com/research/article/best-cars/190044/top-6-four-seat-convertibles-for-20000.jsp
+
+#+BEGIN_EXAMPLE
+  |--------------------+---------+------+----------|
+  | Car Make           | Cost    | City | X-factor |
+  | and Model          |         | MPG  |          |
+  |--------------------+---------+------+----------|
+  | Fiat 500           | $19,000 |   30 |        6 |
+  | VW Bug             | $26,390 |   20 |        7 |
+  | Volvo C70          | $39,950 |   20 |        5 |
+  | Audi A5 Cabrio     | $42,000 |   22 |        9 |
+  |--------------------+---------+------+----------|
+
+#+END_EXAMPLE
+
+  |--------------------+---------+------+----------|
+  | Car Make           | Cost    | City | X-factor |
+  | and Model          |         | MPG  |          |
+  |--------------------+---------+------+----------|
+  | Fiat 500           | $19,000 |   30 |        6 |
+  | VW Bug             | $26,390 |   20 |        7 |
+  | Volvo C70          | $39,950 |   20 |        5 |
+  | Audi A5 Cabrio     | $42,000 |   22 |        9 |
+  |--------------------+---------+------+----------|
+
+* Exports
+** Export Template
+Move to the top of your files and type =Ctrl-c=, =Ctrl-e= then press
+=t= to insert an export template that you can edit to create a title,
+author, and set some export options.
+
+The export template for the slide version of this document is these
+lines (plus the default lines in the export template):
+#+BEGIN_EXAMPLE
+   #+TITLE:     Org in 4 Sections (plus a demo)
+   #+AUTHOR:    Andrew Caird
+   #+startup: beamer
+   #+LaTeX_CLASS: beamer
+   #+BEAMER_FRAME_LEVEL: 2
+   #+latex_header: \mode<beamer>{\usetheme{Frankfurt}}
+#+END_EXAMPLE
+
+** PDF
+
+Generating PDF requires a LaTeX installation.
+  + Windows :: [[http://miktex.org/download][http://miktex.org/download]]
+  + Mac ::  http://www.tug.org/mactex/
+  + Linux :: your favorite package manager
+
+** HTML
+
+Type =Ctrl-c Ctrl-e= to see the export menu and choose from one of these
+options: 
+#+BEGIN_EXAMPLE
+[h] export as HTML  [H] to temporary buffer
+[R] export region   [b] export as HTML and open in browser
+#+END_EXAMPLE
+
+** ASCII
+
+Type =Ctrl-c Ctrl-e= to see the export menu and choose from one of these
+options: 
+#+BEGIN_EXAMPLE
+[a/n/u] export as ASCII/Latin-1/UTF-8
+[A/N/U] to temporary buffer
+#+END_EXAMPLE
+
+** Pandoc
+
+*Pandoc* isn't an Emacs or Org-mode tool, but it is a file conversion
+tool that is aware of Org-mode and can convert to and from many, many
+formats.  
+
+For more information, see [[http://johnmacfarlane.net/pandoc/][johnmacfarlane.net/pandoc/]].
+
+ | From             | To                      |
+ |------------------+-------------------------|
+ | markdown         | HTML formats            |
+ | reStructuredText | ODT, DOCX               |
+ | textile          | LaTeX                   |
+ | HTML             | PDF                     |
+ | LaTeX            | Markdown, RST, AsciiDoc |
+ | etc.             | etc.                    |
+
+* Demo and Resources
+** Keystrokes
+
+ | esc-enter     | make another entry at the same level      |
+ | tab           | open or close a section                   |
+ | esc-arrows    | indent or outdent a section               |
+ | Ctrl-c Ctrl-e | export the current file to another format |
+ | Ctrl-g        | cancel the current command                |
+ | Ctrl-x Ctrl-f | open a file                               |
+ | Ctrl-x Ctrl-s | save the file                             |
+ | Ctrl-x Ctrl-c | quit Emacs                                |
+
+** Resources
+
+The best resource is [[http://orgmode.org][orgmode.org]], and from there the most useful
+document is the 39-page document [[http://orgmode.org/orgguide.pdf][The compact Org-mode Guide]], and you
+likely won't need all 39-pages.  The full Org-mode manual is also
+there, but it can be quite dense.
