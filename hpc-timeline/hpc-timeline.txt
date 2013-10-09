@@ -145,3 +145,9 @@
    responsibilities of the CAC. I would like to ask the CAC Executive
    Committee to review this report and recommend appropriate actions
    to carry out these recommendations.
+
+* Representation
+
+** Web-based Timeline
+
+   Could be done with: http://www.simile-widgets.org/timeline/
