@@ -42,7 +42,7 @@ body{
 	width: auto;
 	height: 40px;
 	display: block;
-	position: relative;
+	position: absolute;
 	background-color: #99CCFF;
 	color: #CC33CC;
 	border-radius: 5px;
