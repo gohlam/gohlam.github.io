@@ -22,16 +22,18 @@ body{
 	font-style: bold;
 	border: 2px dotted #66FF99;
 	top: -5px;
-	left: 2%;
+	left: 1%;
 }
 
 #nav_bar{
+	clear: left;
 	position: fixed;
 	top: 10px;
 	left: 20px;
 	z-index: 1;
 	padding: 25px;
 	width: 30%;
+	height: 70%;
 }
 
 .link{
