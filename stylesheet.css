@@ -55,7 +55,7 @@ body{
 }*/
 
 li{
-	text-align: center;
+	text-align: left;
 	bottom: 10px;
 }
 
@@ -73,7 +73,6 @@ li a{
 	text-align: center;
 	padding: 8px 0 8px 16px;
 	color: #CC33CC;
-	text-decoration: none;
 }
 
 #par{
@@ -102,14 +101,19 @@ ul{
 	position: fixed;
 }
 
-li{
+ul li{
 	float: left;
-	text-align: left;
+	text-align: center;
 	display: block;
+	position: relative;
 }
 
 li a:hover{
 	background-color: #CC99CC;
+	color: #FF6699;
+}
+
+a:hover{
 	color: #FF6699;
 }
 
