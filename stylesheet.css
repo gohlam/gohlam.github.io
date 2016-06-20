@@ -81,4 +81,6 @@ img {
 	width: 100%;
 	position: relative;
 	height: 50px;
+	clear: both;
+	bottom: 20px;
 }
