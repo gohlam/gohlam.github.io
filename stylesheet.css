@@ -69,8 +69,6 @@ a:visited{
 }
 
 li a{
-	display: block;
-	text-align: center;
 	padding: 8px 0 8px 16px;
 	color: #CC33CC;
 }
@@ -105,6 +103,8 @@ ul li{
 	float: left;
 	text-align: center;
 	display: block;
+	border: 1px solid #99CCCC;
+	border-radius: 5px;
 }
 
 li a:hover{
