@@ -28,14 +28,14 @@ body{
 	position: relative;
 	z-index: 2;
 	padding: 25px;
-	left: 100%;
 	width: 30%;
 	float: left;
 }
 
 .link{
+	margin: -50px 10px 10px 10px;
 	width: 30%;
-	display:block;
+	display: block;
 	position: absolute;
 	background-color: #99CCFF;
 	color: #CC33CC;
