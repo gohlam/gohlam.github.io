@@ -53,7 +53,14 @@ body{
 	text-align: center;
 	font-size: 20px;
 }*/
+a:link{
+	text-decoration: none;
+	color: #FFFFCC;
+}
 
+a:visited{
+	color: #FFFFFF;
+}
 li a:link{
 	text-decoration: none;
 	color: #FFFFCC;
