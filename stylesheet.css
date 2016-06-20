@@ -90,11 +90,13 @@ ul{
 	background-color: #99CCFF;
 	border: 1px solid #99CCCC;
 	border-radius: 5px;
+	display: block;
 }
 
 li{
 	float: left;
 	text-align: left;
+	display: block;
 }
 
 li a:hover{
