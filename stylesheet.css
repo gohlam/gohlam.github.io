@@ -70,7 +70,7 @@ li{
 }
 
 img {
-	float: right;
+	right: 100%;
 }
 
 #footer{
@@ -81,6 +81,5 @@ img {
 	width: 100%;
 	position: relative;
 	height: 50px;
-	/*clear: both;*/
-	bottom: 0px;
+	clear: both;
 }
