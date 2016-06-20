@@ -22,7 +22,7 @@ body{
 	font-style: bold;
 	border: 2px dotted #66FF99;
 	top: -5px;
-	left: 2%;
+	left: 0%;
 }
 
 #nav_bar{
@@ -63,11 +63,11 @@ a:visited{
 #par{
 	position: absolute;
 	left: 38%;
-	top: 18%;
+	top: 23%;
 	color: #CC33CC;
 	text-align: left;
 	width: 30%;
-	height: 50%;
+	height: 40%;
 	font-size: 20px;
 }
 
