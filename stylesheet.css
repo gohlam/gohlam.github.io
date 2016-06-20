@@ -97,9 +97,7 @@ ul{
 }
 
 ul li{
-	width: 25%;
-	float: left;
-	text-align: center;
+	text-align: left;
 	display: block;
 	border: 2px solid #99FFCC;
 	border-radius: 5px;
@@ -111,12 +109,12 @@ a:hover{
 
 img {
 	display: block;
-	top: 80px;
+	top: 85px;
 	position: relative;
 	float: right;
 	height: 25%;
 	width: 25%;
-	margin: auto;
+	margin: 0px;
 	clear: right;
 	padding: 0px;
 }
@@ -128,9 +126,9 @@ img {
 	font-family: cursive;
 	color: #FFFFFF;
 	width: 100%;
-	/*position: relative;*/
+	position: absolute;
 	height: 50px;
 	clear: both;
-	bottom: 5px;
-	padding: 20px;
+	bottom: 0px;
+	padding: 10px;
 }
