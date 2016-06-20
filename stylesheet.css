@@ -105,7 +105,6 @@ ul li{
 	float: left;
 	text-align: center;
 	display: block;
-	position: absolute;
 }
 
 li a:hover{
@@ -122,10 +121,10 @@ img {
 	top: 80px;
 	position: relative;
 	float: right;
-	height: 30%;
-	width: 30%;
+	height: 27%;
+	width: 27%;
 	margin: auto;
-	clear: both;
+	clear: right;
 	padding: 0px;
 }
 
