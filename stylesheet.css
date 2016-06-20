@@ -90,7 +90,7 @@ ul{
 	float: left;
 	clear: left;
 	list-style-type: none;
-	margin: 80px 10px 10px 0;
+	margin: 90px 10px 10px 0;
 	padding: 0;
 	overflow: auto;
 	background-color: #99CCFF;
@@ -105,7 +105,7 @@ ul li{
 	float: left;
 	text-align: center;
 	display: block;
-	position: fixed;
+	position: absolute;
 }
 
 li a:hover{
