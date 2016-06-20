@@ -28,7 +28,7 @@ body{
 #nav_bar{
 	/*clear: left;*/
 	position: fixed;
-	top: 60px;
+	top: -60px;
 	left: 20px;
 	z-index: 1;
 	padding: 25px;
@@ -37,7 +37,7 @@ body{
 }
 
 .link{
-	top: 60px;
+	top: -60px;
 	left: 20px;
 	width: auto;
 	height: auto;
