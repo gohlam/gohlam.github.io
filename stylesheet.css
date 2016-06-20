@@ -72,8 +72,8 @@ li{
 img {
 	position: relative;
 	float: right;
-	height: 200px;
-	width: 200px;
+	height: 300px;
+	width: 300px;
 }
 
 #footer{
@@ -85,4 +85,5 @@ img {
 	/*position: relative;*/
 	height: 50px;
 	clear: both;
+	padding: 10px;
 }
