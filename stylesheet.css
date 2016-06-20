@@ -59,10 +59,10 @@ a:visited{
 }
 
 #par{
-	float: center;
+	float: right;
 	color: #CC33CC;
 	text-align: left;
-
+	width: 50%;
 }
 
 li{
@@ -80,6 +80,5 @@ img {
 	color: #FFFFFF;
 	width: 100%;
 	position: relative;
-	clear: both;
 	height: 50px;
 }
