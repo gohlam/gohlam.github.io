@@ -22,7 +22,7 @@ body{
 	font-style: bold;
 	border: 2px dotted #66FF99;
 	top: -5px;
-	left: 0%;
+	left: 2%;
 }
 
 #nav_bar{
@@ -38,7 +38,7 @@ body{
 	margin: -50px 10px 10px 10px;
 	width: 30%;
 	display: block;
-	position: absolute;
+	position: relative;
 	background-color: #99CCFF;
 	color: #CC33CC;
 	border-radius: 5px;
