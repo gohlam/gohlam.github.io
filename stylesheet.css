@@ -70,7 +70,10 @@ li{
 }
 
 img {
-	right: 100%;
+	position: relative;
+	float: right;
+	height: 200px;
+	width: 200px;
 }
 
 #footer{
@@ -79,7 +82,7 @@ img {
 	font-family: cursive;
 	color: #FFFFFF;
 	width: 100%;
-	position: relative;
+	/*position: relative;*/
 	height: 50px;
 	clear: both;
 }
