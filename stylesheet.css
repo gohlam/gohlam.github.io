@@ -101,5 +101,6 @@ img {
 	position: relative;
 	height: 50px;
 	clear: both;
+	bottom: 10px;
 	padding: 20px;
 }
