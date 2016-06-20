@@ -90,7 +90,7 @@ ul{
 	float: left;
 	clear: left;
 	list-style-type: none;
-	margin: 0;
+	margin: 80 10 10 0;
 	padding: 0;
 	overflow: auto;
 	background-color: #99CCFF;
