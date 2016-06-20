@@ -1,8 +1,0 @@
-#creating my first gitignore file
-#
-cat .git/info/exclude
-# ignore objects and archives, anywhere in the tree
-*.[oa]
-cat CAEN-testing/.getignore
-git status
-#This should ignore any objects and archives 
