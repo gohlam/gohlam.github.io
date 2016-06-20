@@ -121,8 +121,8 @@ img {
 	top: 80px;
 	position: relative;
 	float: right;
-	height: 27%;
-	width: 27%;
+	height: auto%;
+	width: auto%;
 	margin: auto;
 	clear: right;
 	padding: 0px;
