@@ -25,11 +25,12 @@ body{
 }
 
 #nav_bar{
-	position: relative;
+	position: fixed;
+	top: 10px;
+	left: 20px;
 	z-index: 2;
 	padding: 25px;
 	width: 30%;
-	float: left;
 }
 
 .link{
@@ -59,11 +60,14 @@ a:visited{
 }
 
 #par{
-	margin: -200px 200px 20px 100px;
+	position: absolute;
+	left: 0;
+	top: 50%;
 	color: #CC33CC;
 	text-align: left;
 	width: 30%;
 	height: 50%;
+	font-size: 20px;
 }
 
 li{
