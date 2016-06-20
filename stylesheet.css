@@ -25,14 +25,18 @@ body{
 }
 
 #nav_bar{
-	position: auto;
+	position: relative;
 	z-index: 2;
 	padding: 25px;
 	left: 100%;
 	clear: left;
+	width: 30%;
+	float: left;
 }
 
 .link{
+	width: 30%;
+	display:block;
 	position: absolute;
 	background-color: #99CCFF;
 	color: #CC33CC;
@@ -64,7 +68,7 @@ li{
 }
 
 #image{
-	right: 100%;
+	float: right;
 	clear: right;
 }
 
