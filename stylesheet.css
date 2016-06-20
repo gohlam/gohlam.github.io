@@ -6,7 +6,6 @@ body{
 	background-color: #CCCCFF;
 	border-radius: 5px;
 	border: 1px solid #99CCCC;
-	margin-top: -20px;
 }
 
 #header{
@@ -22,10 +21,11 @@ body{
 	height: 50px;
 	font-style: bold;
 	border: 2px dotted #66FF99;
+	margin-top: - 25px;
 }
 
 #nav_bar{
-	position: fixed;
+	position: auto;
 	z-index: 2;
 	padding: 25px;
 	left: 100%;
@@ -64,7 +64,7 @@ li{
 }
 
 #image{
-	float: right;
+	right: 100%;
 	clear: right;
 }
 
