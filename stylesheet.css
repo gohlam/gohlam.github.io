@@ -1,0 +1,39 @@
+body{
+	background-color: #CC99FF;
+	border: 1px dotted #66FF99;
+}
+
+.div{
+	background-color: #CCCCFF;
+	border-radius: 5px;
+}
+
+#header{
+	z-index: 1;
+	padding: 10px;
+	position: fixed;
+	font-family: cursive;
+	float: auto;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+#nav_bar{
+	position: fixed;
+}
+
+.link{
+
+}
+
+div p{
+
+}
+
+#image{
+
+}
+
+#footer{
+
+}
