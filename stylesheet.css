@@ -17,12 +17,12 @@ body{
 	font-size: 30px;
 	text-align: center;
 	color: #FFFFFF;
-	width: 100%;
+	width: 98%;
 	height: 50px;
 	font-style: bold;
 	border: 2px dotted #66FF99;
 	top: -5px;
-	left: 0%;
+	left: 2%;
 }
 
 #nav_bar{
@@ -62,8 +62,8 @@ a:visited{
 
 #par{
 	position: absolute;
-	left: 0;
-	top: 50%;
+	left: 40%;
+	top: 30%;
 	color: #CC33CC;
 	text-align: left;
 	width: 30%;
