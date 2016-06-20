@@ -25,7 +25,7 @@ body{
 	left: 1%;
 }
 
-#nav_bar{
+/*#nav_bar{
 	clear: left;
 	position: fixed;
 	top: 80px;
@@ -34,15 +34,17 @@ body{
 	padding: 25px;
 	width: 15%;
 	height: 45%;
-}
+}*/
 
 .link{
-	top: 0px;
-	left: 0px;
-	width: auto;
+	z-index: 1;
+	clear: left;
+	top: 80px;
+	left: 20px;
+	width: 15%;
 	height: 40px;
 	display: block;
-	position: absolute;
+	position: fixed;
 	background-color: #99CCFF;
 	color: #CC33CC;
 	border-radius: 5px;
