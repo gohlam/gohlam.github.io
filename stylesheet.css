@@ -28,19 +28,19 @@ body{
 #nav_bar{
 	/*clear: left;*/
 	position: fixed;
-	top: 60px;
+	top: 65px;
 	left: 20px;
 	z-index: 1;
 	padding: 25px;
 	width: 15%;
-	height: 50%;
+	height: 45%;
 }
 
 .link{
-	top: 5px;
-	left: 5px;
+	top: 3px;
+	left: 3px;
 	width: auto;
-	height: auto;
+	height: 5px;
 	display: block;
 	position: relative;
 	background-color: #99CCFF;
