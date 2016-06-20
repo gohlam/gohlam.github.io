@@ -81,6 +81,7 @@ li{
 
 img {
 	display: block;
+	top: 60px;
 	position: relative;
 	float: right;
 	height: 30%;
