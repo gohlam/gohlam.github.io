@@ -10,7 +10,7 @@ body{
 
 #header{
 	border-radius: 100%;
-	z-index: 1;
+	z-index: 2;
 	padding: 20px;
 	position: fixed;
 	font-family: cursive;
@@ -21,14 +21,15 @@ body{
 	height: 50px;
 	font-style: bold;
 	border: 2px dotted #66FF99;
-	margin-top: - 25px;
+	top: 0;
+	left: 50%;
 }
 
 #nav_bar{
 	position: fixed;
 	top: 10px;
 	left: 20px;
-	z-index: 2;
+	z-index: 1;
 	padding: 25px;
 	width: 30%;
 }
