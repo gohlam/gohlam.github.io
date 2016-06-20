@@ -59,16 +59,16 @@ a:visited{
 }
 
 #par{
-	float: center;
+	margin: 200px;
 	color: #CC33CC;
 	text-align: left;
 	width: 50%;
+	height: 50%;
 }
 
 li{
 	text-align: left;
 }
-
 img {
 	display: block;
 	position: relative;
