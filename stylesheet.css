@@ -19,14 +19,15 @@ body{
 	color: #FFFFFF;
 	width: 100%;
 	font-style: bold;
-	border: 1px dotted #66FF99;
+	border: 2px dotted #66FF99;
 }
 
 #nav_bar{
 	position: fixed;
-	z-index: 1;
+	z-index: 2;
 	padding: 25px;
 	left: 100%;
+	clear: left;
 }
 
 .link{
@@ -35,7 +36,7 @@ body{
 	color: #CC33CC;
 	border-radius: 5px;
 	border: 1px solid #99CCCC;
-	text-align: center;
+	text-align: left;
 	font-size: 20px;
 }
 
@@ -56,10 +57,22 @@ div p{
 
 }
 
+li{
+	text-align: left;
+}
+
 #image{
 	float: right;
+	clear: right;
 }
 
 #footer{
+	text-align: center;
+	font-size: 18px;
+	font-family: cursive;
+	color: #FFFFFF;
+	width: 100%;
 	position: relative;
+	clear: both;
+	height: 50px;
 }
