@@ -108,11 +108,6 @@ ul li{
 	border-radius: 5px;
 }
 
-li a:hover{
-	background-color: #CC99CC;
-	color: #FF6699;
-}
-
 a:hover{
 	color: #FF6699;
 }
@@ -140,6 +135,6 @@ img {
 	height: 50px;
 	clear: both;
 	/*bottom: 10px;*/
-	position: absolute;
+	position: relative;
 	padding: 20px;
 }
