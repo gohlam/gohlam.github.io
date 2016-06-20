@@ -1,6 +1,5 @@
 body{
 	background-color: #CC99FF;
-	border: 1px dotted #66FF99;
 }
 
 .div{
@@ -10,6 +9,7 @@ body{
 }
 
 #header{
+	border-radius: 100%;
 	z-index: 1;
 	padding: 25px;
 	position: fixed;
@@ -19,6 +19,7 @@ body{
 	color: #FFFFFF;
 	width: 100%;
 	font-style: bold;
+	border: 1px dotted #66FF99;
 }
 
 #nav_bar{
