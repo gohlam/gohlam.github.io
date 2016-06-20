@@ -97,6 +97,8 @@ ul{
 }
 
 ul li{
+	height: 5%;
+	font-size: 20px;
 	text-align: left;
 	display: block;
 	border: 2px solid #99FFCC;
@@ -129,6 +131,6 @@ img {
 	position: absolute;
 	height: 50px;
 	clear: both;
-	bottom: 0px;
+	bottom: 5px;
 	padding: 10px;
 }
