@@ -5,7 +5,7 @@ body{
 .div{
 	background-color: #CCCCFF;
 	border-radius: 5px;
-	border: 1px solid #99CCCC;
+	border: 2px solid #99CCCC;
 }
 
 #header{
@@ -20,7 +20,7 @@ body{
 	width: 95%;
 	height: 50px;
 	font-style: bold;
-	border: 2px dotted #66FF99;
+	border: 3px dotted #66FF99;
 	top: 0px;
 	left: 1%;
 }
@@ -68,10 +68,6 @@ a:visited{
 	color: #FFFFFF;
 }
 
-li a{
-	padding: 8px 0 8px 16px;
-	color: #CC33CC;
-}
 
 #par{
 	position: absolute;
@@ -85,6 +81,7 @@ li a{
 }
 
 ul{
+	color: #CC33CC;
 	float: left;
 	clear: left;
 	list-style-type: none;
@@ -92,7 +89,7 @@ ul{
 	padding: 0;
 	overflow: auto;
 	background-color: #99CCFF;
-	border: 1px solid #99CCCC;
+	border: 2px solid #99CCCC;
 	border-radius: 5px;
 	width: 25%;
 	height: 50%;
@@ -104,7 +101,7 @@ ul li{
 	float: left;
 	text-align: center;
 	display: block;
-	border: 1px solid #99CCCC;
+	border: 2px solid #99FFCC;
 	border-radius: 5px;
 }
 
@@ -134,7 +131,6 @@ img {
 	/*position: relative;*/
 	height: 50px;
 	clear: both;
-	/*bottom: 10px;*/
-	position: relative;
+	bottom: 5px;
 	padding: 20px;
 }
