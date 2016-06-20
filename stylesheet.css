@@ -29,7 +29,6 @@ body{
 	z-index: 2;
 	padding: 25px;
 	left: 100%;
-	clear: left;
 	width: 30%;
 	float: left;
 }
@@ -69,7 +68,6 @@ li{
 
 #image{
 	float: right;
-	clear: right;
 }
 
 #footer{
