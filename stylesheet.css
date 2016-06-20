@@ -17,7 +17,7 @@ body{
 	font-size: 30px;
 	text-align: center;
 	color: #FFFFFF;
-	width: 98%;
+	width: 95%;
 	height: 50px;
 	font-style: bold;
 	border: 2px dotted #66FF99;
@@ -62,7 +62,7 @@ a:visited{
 
 #par{
 	position: absolute;
-	left: 38%;
+	left: 35%;
 	top: 23%;
 	color: #CC33CC;
 	text-align: left;
