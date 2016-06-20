@@ -58,7 +58,10 @@ a:visited{
 	color: #FFFFFF;
 }
 
-div p{
+#par{
+	float: center;
+	color: #CC33CC;
+	text-align: left;
 
 }
 
