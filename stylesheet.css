@@ -100,6 +100,7 @@ ul{
 }
 
 ul li{
+	width: 25%;
 	float: left;
 	text-align: center;
 	display: block;
@@ -121,8 +122,8 @@ img {
 	top: 80px;
 	position: relative;
 	float: right;
-	height: auto%;
-	width: auto%;
+	height: 25%;
+	width: 25%;
 	margin: auto;
 	clear: right;
 	padding: 0px;
@@ -138,6 +139,7 @@ img {
 	/*position: relative;*/
 	height: 50px;
 	clear: both;
-	bottom: 10px;
+	/*bottom: 10px;*/
+	position: absolute;
 	padding: 20px;
 }
