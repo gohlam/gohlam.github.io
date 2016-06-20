@@ -93,7 +93,7 @@ img {
 	font-family: cursive;
 	color: #FFFFFF;
 	width: 100%;
-	/*position: relative;*/
+	position: relative;
 	height: 50px;
 	clear: both;
 	padding: 20px;
