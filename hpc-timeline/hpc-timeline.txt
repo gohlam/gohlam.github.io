@@ -1,0 +1,153 @@
+#   -*- mode: org; fill-column: 78 -*-
+#+TITLE: hpc-history
+#+AUTHOR: Andrew Caird
+#+EMAIL: acaird@umich.edu
+#+OPTIONS: ':t *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t c:nil
+#+OPTIONS: creator:comment d:(not LOGBOOK) date:t e:t email:nil f:t inline:t
+#+OPTIONS: num:t p:nil pri:nil stat:t tags:t tasks:t tex:t timestamp:t toc:t
+#+OPTIONS: todo:t |:t
+
+* A timeline of High-performance Computing in the College of Engineering at the University of Michigan
+  |      / | <                                                                                             |
+  | *Year* |                                                                                               |
+  |   1986 | LaSC is established with Bill Martin as director                                              |
+  |        |                                                                                               |
+  |--------+-----------------------------------------------------------------------------------------------|
+  |   1992 | Center for Parallel Computing is started with CAEN employee Paul McClay at the first employee |
+  |        | The CPC operates a Kendall Square Research KSR-1 32-core shared memory computer               |
+  |        | Andy Caird is hired as the first CPC student employee                                         |
+  |--------+-----------------------------------------------------------------------------------------------|
+  |   1994 | The CPC acquires an IBM SP2                                                                   |
+  |        | The CPC acquires an SGI Origin                                                                |
+  |        | Paul McClay leaves the CPC and Andy Caird becomes the second CPC employee                     |
+  |        | The CPC acquires a Convex SPP-1600                                                            |
+  |        | Rebecca Hollenbeck becomes the second CPC student employee                                    |
+  |        | The NPACI grant starts                                                                        |
+  |--------+-----------------------------------------------------------------------------------------------|
+  |   1998 | Andy Caird leaves the CPC                                                                     |
+  |        | Tom Hacker joins the CPC                                                                      |
+  |--------+-----------------------------------------------------------------------------------------------|
+  |   2001 | LaSC and the CPC merge into the CAC                                                           |
+  |        |                                                                                               |
+  |--------+-----------------------------------------------------------------------------------------------|
+  |   2003 | Brock Palen is hired as a student employee                                                    |
+  |        | The Apple clusters aon and eliza are installed                                                |
+  |--------+-----------------------------------------------------------------------------------------------|
+  |   2004 | Andy Caird re-joins the CAC                                                                   |
+  |--------+-----------------------------------------------------------------------------------------------|
+  |   2005 | Brock Palen is hired as a full-time employee                                                  |
+  |--------+-----------------------------------------------------------------------------------------------|
+  |   2008 | ORCI is started with Dan Atkins as the AVP of RCI                                             |
+  |--------+-----------------------------------------------------------------------------------------------|
+  |   2010 | Flux is started as a campus service for high-performance computing                            |
+  |--------+-----------------------------------------------------------------------------------------------|
+  |   2012 | Dan Atkins steps down as AVP-RCI                                                              |
+  |        | Ken Powell becomes interim AVP-RCI                                                            |
+  |--------+-----------------------------------------------------------------------------------------------|
+  |   2013 | Eric Michielssen becomes AVP-ARC                                                              |
+  |--------+-----------------------------------------------------------------------------------------------|
+
+
+* Background Information					   :noexport:
+
+** Email from S. Director Establishing CAC
+   |      <r> |                                                   |
+   |    From: | Stephen W. Director <director@umich.edu>          |
+   |    Date: | Wed, Dec 19, 2001 at 3:28 PM                      |
+   | Subject: | New Center for Advanced Computing                 |
+   |      To: | coefac@umich.edu                                  |
+   |      Cc: | "CoE Dean's Cabinet (E-mail)" <coedcab@umich.edu> |
+
+   Dear Colleagues -
+
+   The College of Engineering will combine the operations and
+   responsibilities of the Center for Parallel Computing (CPC) and the
+   Laboratory for Scientific Computation into a single Engineering
+   unit named the Center for Advanced Computing (CAC). The CAC will
+   have responsibility for support of advanced computing, which
+   includes such activities as high-end parallel computing,
+   data-intensive computing, cluster computing, and advanced
+   visualization methods. Initially, the detailed portfolio of
+   activities for CAC will be the current activities and
+   responsibilities of CPC and LaSC, but this may change in response
+   to faculty needs or to address new opportunities in scientific
+   computing, such as cluster computing and the emerging grid.
+
+   I have asked Bill Martin, currently the Director of LaSC to serve
+   as Director of CAC. There will be a six person Executive Committee
+   to provide guidance and oversight to CSC, consisting of the CAC
+   director as chair, the executive director for information
+   technology in the College (Paul Killey), and four faculty who have
+   extensive experience and interest in advanced computing. The
+   following faculty have agreed to serve the initial three-year terms
+   on the CAC Executive Committee:
+
+   * Ken Powell, Aerospace Engineering
+   * Sharon Glotzer, Materials Science and Engineering
+   * Joyce Penner, Atmospheric, Oceanic, and Space Sciences
+   * Quentin Stout, Electrical Engineering and Computer Science
+
+   The CAC Director will report to me through the Associate Dean for
+   Research.
+
+   This merger will allow the College to focus its advanced computing
+   resources in a single unit, which will simplify the College
+   organizational structure for advanced computing and avoid the
+   confusion and overlapping responsibilities with CPC and LaSC. This
+   will also streamline the College's cooperative activities with
+   other schools and colleges in the area of advanced computing and
+   should help the College and University respond to major initiatives
+   in the advanced computing arena.
+
+   I would like to take this opportunity to thank Quentin Stout for
+   his leadership of CPC during the past years and his willingness to
+   continue his service to the College on the CAC Executive Committee.
+
+   For those of you unfamiliar with CPE and LaSC I append some
+   background.
+
+   Best regards,
+
+   Steve
+
+   Stephen W. Director
+   Robert J. Vlasic Dean of Engineering
+   __________________________________________________________________
+
+   Background
+
+   LaSC was established in 1986 and provides expert consultation and
+   assistance in scientific computing to UM faculty, staff, and
+   students. In addition, LaSC administers the UM-wide Doctoral
+   Program in Scientific Computing.  Bill Martin is the LaSC director.
+
+   The Center for Parallel Computing was established in 1992 to
+   operate a parallel computing facility that was funded by a major
+   grant from the NSF and matching funds from Ford Motor Company. CPC
+   has acquired, operated, and maintained several different parallel
+   computing systems over the years, and currently operates a major
+   IBM SP2/SP3 facility with 136 CPUs (soon to be 200 CPUs), a SGI
+   Origin, and two Intel clusters, and plans to acquire a major
+   cluster (TeraFLOPS capability) within the next couple months.
+   Quentin Stout is the CPC director.
+
+   This merger of CPC and LaSC was recommended by the Ad Hoc Committee
+   on Advanced Computing, which noted in its final report dated
+   January 2001:
+
+                   The Committee recommends that the proposed Center
+   take over the activities of CPC and LaSC, leading to a single
+   entity to cover research and instructional issues related to
+   advanced computing and related topics.
+
+   The report of the Ad Hoc Committee contains a number of
+   recommendations regarding the organization, resources, and
+   responsibilities of the CAC. I would like to ask the CAC Executive
+   Committee to review this report and recommend appropriate actions
+   to carry out these recommendations.
+
+* Representation
+
+** Web-based Timeline
+
+   Could be done with: http://www.simile-widgets.org/timeline/
